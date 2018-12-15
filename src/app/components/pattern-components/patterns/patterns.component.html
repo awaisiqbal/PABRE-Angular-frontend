@@ -1,0 +1,12 @@
+<h2>Patterns</h2>
+<ul class="list">
+  <li *ngFor="let pattern of patterns">
+    <a routerLink="/patterns/{{pattern.id}}">
+      <span class="badge">{{pattern.id}}</span> {{pattern.name}}
+    </a>
+  </li>
+</ul>
+
+<app-pattern-detail></app-pattern-detail>
+
+

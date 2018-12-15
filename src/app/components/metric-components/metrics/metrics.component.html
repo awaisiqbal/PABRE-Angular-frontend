@@ -1,0 +1,8 @@
+<h2>Metrics</h2>
+<ul class="list">
+  <li *ngFor="let metric of metrics">
+    <a routerLink="/metrics/{{metric.id}}">
+      <span class="badge">{{metric.id}}</span> {{metric.name}}
+    </a>
+  </li>
+</ul>

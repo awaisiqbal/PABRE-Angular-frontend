@@ -1,0 +1,8 @@
+<h2>Keywords</h2>
+<ul class="list">
+  <li *ngFor="let keyword of keywords">
+    <a routerLink="/keywords/{{keyword.id}}">
+      <span class="badge">{{keyword.id}}</span> {{keyword.name}}
+    </a>
+  </li>
+</ul>

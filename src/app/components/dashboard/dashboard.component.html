@@ -1,0 +1,8 @@
+<h3>Top Patterns</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let pattern of patterns" class="col-1-4" routerLink="/patterns/{{pattern.id}}">
+    <div class="module pattern">
+      <h4>{{pattern.name}}</h4>
+    </div>
+  </a>
+</div>
