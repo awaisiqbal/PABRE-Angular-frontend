@@ -2,11 +2,29 @@
 
   <h2>{{pattern.name}}</h2>
   <div><span>id: </span>{{pattern.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="pattern.name" placeholder="name"/>
-    </label>
+  <div><span>name: </span>{{pattern.name}}</div>
+  <div><span>description: </span>{{pattern.description}}</div>
+  <div><span>author: </span>{{pattern.author}}</div>
+  <div><span>available: </span>{{pattern.available}}</div>
+  <div><span>editable: </span>{{pattern.editable}}</div>
+  <div><span>keywords: </span>
+    <ul class="list">
+      <li *ngFor="let keyword of pattern.keywords">
+        {{keyword}}
+      </li>
+    </ul>
   </div>
+  <div><span>Versions: </span>
+    <ul class="list">
+      <li *ngFor="let v of pattern.versions; let i = index">
+        <span>Version: </span>{{i + 1}}
+        <div><span>id: </span> {{v.id}}</div>
+        <div><span>goal: </span> {{v.goal}}</div>
+      </li>
+    </ul>
+  </div>
+
+
   <button (click)="goBack()">go back</button>
 
 </div>

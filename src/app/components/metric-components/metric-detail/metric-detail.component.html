@@ -2,10 +2,11 @@
 
   <h2>{{metric.name}}</h2>
   <div><span>id: </span>{{metric.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="metric.name" placeholder="name"/>
-    </label>
+  <div><span>name: </span>{{metric.name}}</div>
+  <div><span>description: </span>{{metric.description}}</div>
+  <div><span>type: </span>{{metric.type}}</div>
+  <div *ngIf="metric.simple">
+    Simple metric type: {{metric.simple.name}}
   </div>
   <button (click)="goBack()">go back</button>
 
