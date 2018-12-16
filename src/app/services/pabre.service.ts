@@ -14,7 +14,9 @@ export class PabreService {
 
   private baseURL = 'http://217.172.12.199:9408/pabre-ws/api/';  // URL to web api
 
-  constructor(private http: HttpClient, private messageService: MessageService) {
+  constructor(
+    private http: HttpClient,
+    private messageService: MessageService) {
   }
 
   getKeywords(): Observable<Keyword[]> {

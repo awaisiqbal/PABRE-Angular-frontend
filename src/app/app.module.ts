@@ -9,11 +9,12 @@ import {MessagesComponent} from './messages/messages.component';
 import {AppRoutingModule} from './app-routing.module';
 import {DashboardComponent} from './components/dashboard/dashboard.component';
 import {HttpClientModule} from '@angular/common/http';
-import { MetricsComponent } from './components/metric-components/metrics/metrics.component';
-import { MetricDetailComponent } from './components/metric-components/metric-detail/metric-detail.component';
-import { KeywordDetailComponent } from './components/keyword-components/keyword-detail/keyword-detail.component';
-import { KeywordsComponent } from './components/keyword-components/keywords/keywords.component';
-import {MatButtonModule, MatCardModule, MatList, MatListItem, MatListModule, MatToolbarModule} from '@angular/material';
+import {MetricsComponent} from './components/metric-components/metrics/metrics.component';
+import {MetricDetailComponent} from './components/metric-components/metric-detail/metric-detail.component';
+import {KeywordDetailComponent} from './components/keyword-components/keyword-detail/keyword-detail.component';
+import {KeywordsComponent} from './components/keyword-components/keywords/keywords.component';
+import {MatButtonModule, MatCardModule, MatListModule, MatSnackBarModule, MatToolbarModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,9 @@ import {MatButtonModule, MatCardModule, MatList, MatListItem, MatListModule, Mat
     MatToolbarModule,
     MatCardModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
