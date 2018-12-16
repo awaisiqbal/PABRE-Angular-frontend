@@ -2,7 +2,6 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Metric} from '../../../models/metric';
 import {ActivatedRoute} from '@angular/router';
 import {PabreService} from '../../../services/pabre.service';
-import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-metric-detail',
@@ -15,8 +14,7 @@ export class MetricDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private pabreService: PabreService,
-    private location: Location) {
+    private pabreService: PabreService) {
   }
 
   ngOnInit() {
@@ -29,10 +27,6 @@ export class MetricDetailComponent implements OnInit {
       const id = +this.route.snapshot.paramMap.get('id');
       this.pabreService.getMetric(id).subscribe(metric => this.metric = metric);
     }
-  }
-
-  goBack(): void {
-    this.location.back();
   }
 
 }

@@ -15,6 +15,7 @@ import {KeywordDetailComponent} from './components/keyword-components/keyword-de
 import {KeywordsComponent} from './components/keyword-components/keywords/keywords.component';
 import {MatButtonModule, MatCardModule, MatListModule, MatSnackBarModule, MatToolbarModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BackButtonComponent } from './components/utilities/back-button/back-button.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MetricsComponent,
     MetricDetailComponent,
     KeywordDetailComponent,
-    KeywordsComponent
+    KeywordsComponent,
+    BackButtonComponent
   ],
   imports: [
     BrowserModule,

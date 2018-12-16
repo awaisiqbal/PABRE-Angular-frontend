@@ -2,7 +2,6 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Pattern} from '../../../models/pattern';
 import {ActivatedRoute} from '@angular/router';
 import {PabreService} from '../../../services/pabre.service';
-import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-pattern-detail',
@@ -15,8 +14,7 @@ export class PatternDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private pabreService: PabreService,
-    private location: Location) {
+    private pabreService: PabreService) {
   }
 
   ngOnInit() {
@@ -29,9 +27,5 @@ export class PatternDetailComponent implements OnInit {
       const id = +this.route.snapshot.paramMap.get('id');
       this.pabreService.getPattern(id).subscribe(pattern => this.pattern = pattern);
     }
-  }
-
-  goBack(): void {
-    this.location.back();
   }
 }

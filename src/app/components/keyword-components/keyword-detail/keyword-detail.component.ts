@@ -2,7 +2,6 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Keyword} from '../../../models/keyword';
 import {ActivatedRoute} from '@angular/router';
 import {PabreService} from '../../../services/pabre.service';
-import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-keyword-detail',
@@ -15,8 +14,7 @@ export class KeywordDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private pabreService: PabreService,
-    private location: Location) {
+    private pabreService: PabreService) {
   }
 
   ngOnInit() {
@@ -31,7 +29,4 @@ export class KeywordDetailComponent implements OnInit {
     }
   }
 
-  goBack(): void {
-    this.location.back();
-  }
 }
