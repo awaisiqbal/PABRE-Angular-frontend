@@ -11,6 +11,7 @@ export class PatternsComponent implements OnInit {
 
   allExpandState = false;
   patterns: Pattern[];
+  isLoaded = false;
 
   constructor(private pabreService: PabreService) {
   }
@@ -20,6 +21,9 @@ export class PatternsComponent implements OnInit {
   }
 
   getPatterns(): void {
-    this.pabreService.getPatterns().subscribe(patterns => this.patterns = patterns);
+    this.pabreService.getPatterns().subscribe(patterns => {
+      this.patterns = patterns;
+      this.isLoaded = true;
+    });
   }
 }

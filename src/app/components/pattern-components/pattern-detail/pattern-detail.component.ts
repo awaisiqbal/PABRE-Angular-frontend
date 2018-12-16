@@ -13,6 +13,7 @@ export class PatternDetailComponent implements OnInit {
   @Input() patternId = 0;
   @Input() pattern: Pattern;
   isEmbedded = false;
+  isLoaded = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -33,7 +34,10 @@ export class PatternDetailComponent implements OnInit {
       idToSearch = +this.route.snapshot.paramMap.get('id');
     }
     if (idToSearch !== 0) {
-      this.pabreService.getPattern(idToSearch).subscribe(pattern => this.pattern = pattern);
+      this.pabreService.getPattern(idToSearch).subscribe(pattern => {
+        this.pattern = pattern;
+        this.isLoaded = true;
+      });
     }
   }
 }
