@@ -1,12 +1,23 @@
 <h2>Patterns</h2>
-<mat-list class="list">
-  <mat-list-item *ngFor="let pattern of patterns; let i = index">
-    <a routerLink="/patterns/{{pattern.id}}">
-      <span class="badge">{{pattern.id}}</span> {{pattern.name}}
-    </a>
-    <mat-divider ></mat-divider>
-  </mat-list-item>
-</mat-list>
+<button mat-raised-button (click)="allExpandState = true" [disabled]="allExpandState" >Expand all</button>
+<button mat-raised-button (click)="allExpandState = false" [disabled]="! allExpandState" >Collapse all</button>
+<mat-accordion multi="true">
+  <mat-expansion-panel *ngFor="let pattern of patterns" [expanded]="allExpandState" class="bg-light">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{pattern.name}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{pattern.description}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <ng-template matExpansionPanelContent>
+      <app-pattern-detail [patternId]="pattern.id"></app-pattern-detail>
+    </ng-template>
+  </mat-expansion-panel>
+</mat-accordion>
+
 
 <app-pattern-detail></app-pattern-detail>
 

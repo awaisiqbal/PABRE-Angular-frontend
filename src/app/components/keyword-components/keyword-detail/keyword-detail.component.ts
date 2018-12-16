@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Keyword} from '../../../models/keyword';
 import {ActivatedRoute} from '@angular/router';
 import {PabreService} from '../../../services/pabre.service';
+import {Keyword} from '../../../models/keyword';
 
 @Component({
   selector: 'app-keyword-detail',

@@ -1,5 +1,4 @@
 import {Metric} from './metric';
-import {Keyword} from './keyword';
 
 export class Pattern {
   id: number;

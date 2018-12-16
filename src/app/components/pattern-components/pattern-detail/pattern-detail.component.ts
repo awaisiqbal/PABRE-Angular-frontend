@@ -10,7 +10,9 @@ import {PabreService} from '../../../services/pabre.service';
 })
 export class PatternDetailComponent implements OnInit {
 
+  @Input() patternId = 0;
   @Input() pattern: Pattern;
+  isEmbedded = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -19,13 +21,19 @@ export class PatternDetailComponent implements OnInit {
 
   ngOnInit() {
     this.getPattern();
+    if (this.patternId !== 0) {
+      this.isEmbedded = true;
+    }
   }
 
   getPattern(): void {
     // Obtain pattern only if id is given
-    if (this.route.snapshot.paramMap.has('id')) {
-      const id = +this.route.snapshot.paramMap.get('id');
-      this.pabreService.getPattern(id).subscribe(pattern => this.pattern = pattern);
+    let idToSearch = this.patternId;
+    if (this.patternId === 0 && this.route.snapshot.paramMap.has('id')) {
+      idToSearch = +this.route.snapshot.paramMap.get('id');
+    }
+    if (idToSearch !== 0) {
+      this.pabreService.getPattern(idToSearch).subscribe(pattern => this.pattern = pattern);
     }
   }
 }

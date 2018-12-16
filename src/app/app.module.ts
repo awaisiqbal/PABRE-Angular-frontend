@@ -13,7 +13,7 @@ import {MetricsComponent} from './components/metric-components/metrics/metrics.c
 import {MetricDetailComponent} from './components/metric-components/metric-detail/metric-detail.component';
 import {KeywordDetailComponent} from './components/keyword-components/keyword-detail/keyword-detail.component';
 import {KeywordsComponent} from './components/keyword-components/keywords/keywords.component';
-import {MatButtonModule, MatCardModule, MatListModule, MatSnackBarModule, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatExpansionModule, MatListModule, MatSnackBarModule, MatToolbarModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { BackButtonComponent } from './components/utilities/back-button/back-button.component';
 
@@ -41,6 +41,7 @@ import { BackButtonComponent } from './components/utilities/back-button/back-but
     MatButtonModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

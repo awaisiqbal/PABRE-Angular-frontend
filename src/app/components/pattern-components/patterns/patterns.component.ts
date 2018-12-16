@@ -9,6 +9,7 @@ import {PabreService} from '../../../services/pabre.service';
 })
 export class PatternsComponent implements OnInit {
 
+  allExpandState = false;
   patterns: Pattern[];
 
   constructor(private pabreService: PabreService) {
