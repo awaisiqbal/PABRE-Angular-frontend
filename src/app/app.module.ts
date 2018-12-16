@@ -13,6 +13,7 @@ import { MetricsComponent } from './components/metric-components/metrics/metrics
 import { MetricDetailComponent } from './components/metric-components/metric-detail/metric-detail.component';
 import { KeywordDetailComponent } from './components/keyword-components/keyword-detail/keyword-detail.component';
 import { KeywordsComponent } from './components/keyword-components/keywords/keywords.component';
+import {MatButtonModule, MatCardModule, MatList, MatListItem, MatListModule, MatToolbarModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,11 @@ import { KeywordsComponent } from './components/keyword-components/keywords/keyw
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatListModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,11 +1,12 @@
 <h2>Patterns</h2>
-<ul class="list">
-  <li *ngFor="let pattern of patterns">
+<mat-list class="list">
+  <mat-list-item *ngFor="let pattern of patterns; let i = index">
     <a routerLink="/patterns/{{pattern.id}}">
       <span class="badge">{{pattern.id}}</span> {{pattern.name}}
     </a>
-  </li>
-</ul>
+    <mat-divider ></mat-divider>
+  </mat-list-item>
+</mat-list>
 
 <app-pattern-detail></app-pattern-detail>
 

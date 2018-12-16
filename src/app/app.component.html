@@ -1,9 +1,23 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/keywords">Keyword</a>
-  <a routerLink="/metrics">Metrics</a>
-  <a routerLink="/patterns">Patterns</a>
+<nav class="navbar navbar-expand-sm bg-light">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <span class="navbar-brand" >PABRE-WS</span>
+    </div>
+    <ul class="nav nav-pills">
+      <li class="active">
+        <a mat-raised-button routerLink="/dashboard">Dashboard</a>
+      </li>
+      <li>
+        <a mat-raised-button routerLink="/keywords">Keyword</a>
+      </li>
+      <li>
+        <a mat-raised-button routerLink="/metrics">Metrics</a>
+      </li>
+      <li>
+        <a mat-raised-button routerLink="/patterns">Patterns</a>
+      </li>
+    </ul>
+  </div>
 </nav>
 <router-outlet></router-outlet>
 <app-messages id="footer"></app-messages>
