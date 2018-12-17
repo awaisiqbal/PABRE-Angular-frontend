@@ -1,34 +1,46 @@
-<h2>Patterns</h2>
-<div *ngIf="!isLoaded">
-  <mat-spinner></mat-spinner>
+<div class="container justify-content-md-center">
+  <h2 class="col-12 ">Patterns</h2>
+  <div *ngIf="!isLoaded" class="row justify-content-md-center">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div class="row">
+    <button
+      *ngIf="isLoaded"
+      mat-raised-button
+      (click)="allExpandState = true"
+      [disabled]="allExpandState"
+      class="col-12 col-sm-3">
+      Expand all
+    </button>
+    <button
+      *ngIf="isLoaded"
+      mat-raised-button
+      (click)="allExpandState = false"
+      [disabled]="! allExpandState"
+      class="col-12 col-sm-3">
+      Collapse all
+    </button>
+  </div>
+  <mat-accordion multi="true">
+    <div class="row">
+      <mat-expansion-panel *ngFor="let pattern of patterns" [expanded]="allExpandState" class="bg-light col-12">
+        <mat-expansion-panel-header class="font-weight-bold">
+          <mat-panel-title>
+            <span class="badge badge-secondary d-none d-md-block">{{pattern.id}}</span> {{pattern.name}}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{pattern.description}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <ng-template matExpansionPanelContent>
+          <app-pattern-detail [patternId]="pattern.id"></app-pattern-detail>
+        </ng-template>
+      </mat-expansion-panel>
+    </div>
+  </mat-accordion>
+
+
+  <app-pattern-detail></app-pattern-detail>
 </div>
-<button
-  *ngIf="isLoaded"
-  mat-raised-button
-  (click)="allExpandState = true"
-  [disabled]="allExpandState">
-  Expand all
-</button>
-<button *ngIf="isLoaded" mat-raised-button (click)="allExpandState = false" [disabled]="! allExpandState">Collapse all
-</button>
-<mat-accordion multi="true">
-  <mat-expansion-panel *ngFor="let pattern of patterns" [expanded]="allExpandState" class="bg-light">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        {{pattern.name}}
-      </mat-panel-title>
-      <mat-panel-description>
-        {{pattern.description}}
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-
-    <ng-template matExpansionPanelContent>
-      <app-pattern-detail [patternId]="pattern.id"></app-pattern-detail>
-    </ng-template>
-  </mat-expansion-panel>
-</mat-accordion>
-
-
-<app-pattern-detail></app-pattern-detail>
-
 

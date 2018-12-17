@@ -6,20 +6,20 @@
   </div>
 
   <h2>{{pattern.name}}</h2>
-  <div><span>ID: </span>{{pattern.id}}</div>
-  <div><span>Name: </span>{{pattern.name}}</div>
-  <div><span>Description: </span>{{pattern.description}}</div>
-  <div><span>Author: </span>{{pattern.author}}</div>
-  <div><span>Available: </span>{{pattern.available}}</div>
-  <div><span>Editable: </span>{{pattern.editable}}</div>
-  <div><span>Keywords: </span>
+  <div><span class="font-weight-bold">ID: </span>{{pattern.id}}</div>
+  <div><span class="font-weight-bold">Name: </span>{{pattern.name}}</div>
+  <div><span class="font-weight-bold">Description: </span>{{pattern.description}}</div>
+  <div><span class="font-weight-bold">Author: </span>{{pattern.author}}</div>
+  <div><span class="font-weight-bold">Available: </span>{{pattern.available}}</div>
+  <div><span class="font-weight-bold">Editable: </span>{{pattern.editable}}</div>
+  <div><span class="font-weight-bold">Keywords: </span>
     <ul class="list">
       <li *ngFor="let keyword of pattern.keywords">
         {{keyword}}
       </li>
     </ul>
   </div>
-  <div><span>Versions: </span>
+  <div><span class="font-weight-bold">Versions: </span>
     <ul class="list">
       <li *ngFor="let v of pattern.versions; let i = index">
         <span>Version: </span>{{i + 1}}

@@ -13,17 +13,10 @@ h2 {
 }
 
 
-nav a:visited, a:link {
-  color: #607d8b;
-}
-
-nav a:hover a:link {
+nav a:hover {
   color: #039be5;
   background-color: #cfd8dc;
-}
-
-nav a.active {
-  color: #039be5;
+  border-radius: 20px;
 }
 
 #footer {

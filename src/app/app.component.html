@@ -1,22 +1,27 @@
-<nav class="navbar navbar-fixed-top  navbar-expand-sm bg-light">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <span class="navbar-brand">PABRE-WS</span>
-    </div>
-    <ul class="nav nav-pills">
-      <li class="active">
-        <a mat-raised-button routerLink="/dashboard">Dashboard</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+  <a class="navbar-brand" href="#">PABRE-WS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/dashboard">Dashboard <span class="sr-only">(current)</span></a>
       </li>
-      <li>
-        <a mat-raised-button routerLink="/keywords">Keyword</a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/keywords">Keywords</a>
       </li>
-      <li>
-        <a mat-raised-button routerLink="/metrics">Metrics</a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/metrics">Metrics</a>
       </li>
-      <li>
-        <a mat-raised-button routerLink="/patterns">Patterns</a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/patterns">Patterns</a>
       </li>
     </ul>
+    <span class="navbar-text">
+      Awais Iqbal Begum
+    </span>
   </div>
 </nav>
 <router-outlet></router-outlet>
