@@ -1,4 +1,5 @@
 # Pabre
+This repository is just to test Angular diferent components, directives, etc.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
 
